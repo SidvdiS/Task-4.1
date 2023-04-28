@@ -1,0 +1,101 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Workout Time"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_weight="1.5"
+            android:layout_marginRight="30dp" />
+
+        <EditText
+            android:id="@+id/exerciseDuration"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:hint="(in seconds)"
+            android:inputType="numberSigned"
+            android:gravity="center_horizontal" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rest Time"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_weight="1.5"
+            android:layout_marginRight="30dp" />
+
+        <EditText
+            android:id="@+id/restDuration"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.4"
+            android:hint="(in seconds)"
+            android:inputType="numberSigned"
+            android:gravity="center_horizontal" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/setTimerButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Set Duration"
+        android:onClick="onSetTimerButtonPressed"
+        android:layout_gravity="center_horizontal" />
+
+    <Button
+        android:id="@+id/startButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:text="Start"
+        android:layout_gravity="center_horizontal"
+        android:onClick="onStartButtonPressed" />
+    <TextView
+        android:id="@+id/exerciseStateTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:textSize="25sp"
+        android:layout_gravity="center_horizontal"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/timerDurationTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:textSize="25sp"
+        android:layout_gravity="center_horizontal"
+        android:text="" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="50dp" />
+</LinearLayout>
